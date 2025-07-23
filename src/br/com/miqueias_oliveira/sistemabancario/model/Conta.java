@@ -46,6 +46,6 @@ public class Conta {
                 numero +
                 ", Titular: " +
                 titular +
-                ", Saldo: R$" + saldo;
+                ", Saldo: R$ " + saldo;
     }
 }
