@@ -25,10 +25,12 @@ public class Conta {
     }
 
     // Deposita um valor na conta, aumentando o saldo inicial
-    public void depositar(double valor) {
+    public boolean depositar(double valor) {
         if (valor > 0) {
             saldo += valor;
+            return true;
         }
+        return false;
     }
 
     // Tenta sacar um valor da conta se houver saldo suficiente.
