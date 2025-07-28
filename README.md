@@ -11,6 +11,8 @@ utilizando boas práticas de organização em camadas (Model, Service, Repositor
 - ✅ Criar conta com nome do titular e número da conta automático.
 - 💰 Realizar depósitos com validação de valor.
 - 💸 Efetuar saques com verificação de saldo e valor válido.
+- 🔄 Transferir valores entre contas com validação de saldo e contas de origem e destino.
+- 📋 Listar todas as contas cadastradas no sistema, mostrando informações relevantes.
 - 📊 Ver saldo atual da conta.
 - ❌ Mensagens claras para erros: conta inexistente, saldo insuficiente e valores inválidos.
 
