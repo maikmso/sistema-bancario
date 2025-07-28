@@ -149,10 +149,15 @@ public class Main {
                 break;
 
                 case 6:
-                    System.out.println();
-                    System.out.println("=====| LISTA DE CONTAS CADASTRADAS |=====");
-                    for (Conta contaCadastrada : contaRepository.listarTodas()) {
-                        System.out.println(contaCadastrada);
+                    if (contaRepository.listarTodas().isEmpty()) {
+                        System.out.println();
+                        exibirMensagemErroListarConta();
+                    } else {
+                        System.out.println();
+                        System.out.println("=====| LISTA DE CONTAS CADASTRADAS |=====");
+                        for (Conta contaCadastrada : contaRepository.listarTodas()) {
+                            System.out.println(contaCadastrada);
+                        }
                     }
                     break;
 
@@ -209,5 +214,10 @@ public class Main {
         System.out.println("======================================");
         System.out.println("----------> Opção inválida <----------");
         System.out.println("======================================");
+    }
+    private static void exibirMensagemErroListarConta() {
+        System.out.println("==========================================");
+        System.out.println("Nenhuma conta cadastrada no sistema ainda.");
+        System.out.println("==========================================");
     }
 }
