@@ -25,7 +25,8 @@ public class Main {
             System.out.println("3 - Sacar");
             System.out.println("4 - Transferir para outra conta");
             System.out.println("5 - Ver saldo");
-            System.out.println("6 - Sair");
+            System.out.println("6 - Listar contas");
+            System.out.println("7 - Sair");
             System.out.print("Escolha uma opção: ");
             opcao = sc.nextInt();
             sc.nextLine(); // limpar buffer
@@ -149,6 +150,14 @@ public class Main {
 
                 case 6:
                     System.out.println();
+                    System.out.println("=====| LISTA DE CONTAS CADASTRADAS |=====");
+                    for (Conta contaCadastrada : contaRepository.listarTodas()) {
+                        System.out.println(contaCadastrada);
+                    }
+                    break;
+
+                case 7:
+                    System.out.println();
                     System.out.println("Encerrando o sistema...");
                     break;
 
@@ -156,7 +165,7 @@ public class Main {
                     System.out.println();
                     exibirMensagemOpcaoInvalida();
             }
-        } while ( opcao != 6);
+        } while ( opcao != 7);
 
         sc.close();
     }
